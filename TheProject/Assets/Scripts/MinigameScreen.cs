@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public delegate void OnGameComplete(); 
@@ -29,4 +28,14 @@ public abstract class MinigameScreen : Screen
     }
 
     protected abstract void OnTimerEnd();
+
+    protected void OnWin()
+    {
+        Win?.Invoke();
+    }
+
+    protected void OnLose()
+    {
+        Lose?.Invoke();
+    }
 }
