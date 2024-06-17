@@ -7,6 +7,7 @@ namespace Utils
     public class DraggableObject : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         [SerializeField] private float dragSpeed;
+        [SerializeField] private Vector3 axis;
         
         protected Transform cacheTransform;
         protected bool isActive;
@@ -52,7 +53,12 @@ namespace Utils
                 return;
             }
 
-            cacheTransform.position = Vector3.Slerp(cacheTransform.position, Input.mousePosition, dragSpeed * Time.deltaTime);
+            var mousePosition = Input.mousePosition;
+            var position = cacheTransform.position;
+            var moveDirection = mousePosition - position;
+            var targetPosition = position + new Vector3(moveDirection.x * axis.x, moveDirection.y * axis.y, moveDirection.z * axis.z);
+            position = Vector3.Slerp(position, targetPosition, dragSpeed * Time.deltaTime);
+            cacheTransform.position = position;
             UpdateDrag();
         }
 
