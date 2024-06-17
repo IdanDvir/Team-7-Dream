@@ -13,13 +13,13 @@ namespace MiniGames.ZiggyProbe
         
         public override async UniTask Show()
         {
-            base.Show();
+            await base.Show();
             gameObject.SetActive(true);
         }
 
         public override async UniTask Hide()
         {
-            base.Hide();
+            await base.Hide();
             gameObject.SetActive(false);
         }
 

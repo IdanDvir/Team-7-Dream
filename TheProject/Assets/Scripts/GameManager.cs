@@ -87,12 +87,12 @@ public class GameManager : MonoBehaviour
         lives -= 1;
         if (lives <= 0)
         {
-            var nextMinigame = lossScreen;//PickRandomMinigame(availableMinigames);
-            // var task = SwitchTo(nextMinigame);
+            var nextMinigame = lossScreen;//;
+            var task = SwitchTo(nextMinigame);
         }
         else
         {
-            var nextMinigame = lossScreen;//PickRandomMinigame(availableMinigames);
+            var nextMinigame = PickRandomMinigame(availableMinigames);
             var task = SwitchTo(nextMinigame);
         }
     }
