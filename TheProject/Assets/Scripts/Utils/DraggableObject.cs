@@ -2,20 +2,18 @@ using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace MiniGames.FeedSmash
+namespace Utils
 {
     public class DraggableObject : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     {
         [SerializeField] private float dragSpeed;
         
-        private Action onStopDrag;
-        private bool isActive;
-        private Transform cacheTransform;
-        private bool isDragging;
+        protected Transform cacheTransform;
+        protected bool isActive;
+        protected bool isDragging;
 
-        public void Activate(Action onStopDrag)
+        public void Activate()
         {
-            this.onStopDrag = onStopDrag;
             isActive = true;
             cacheTransform = transform;
         }
@@ -33,7 +31,7 @@ namespace MiniGames.FeedSmash
             }
 
             isDragging = true;
-            
+            OnDragStart();
         }
 
         public void OnPointerUp(PointerEventData eventData)
@@ -44,7 +42,7 @@ namespace MiniGames.FeedSmash
             }
 
             isDragging = false;
-            onStopDrag.Invoke();
+            OnDragEnd();
         }
 
         private void Update()
@@ -55,6 +53,11 @@ namespace MiniGames.FeedSmash
             }
 
             cacheTransform.position = Vector3.Slerp(cacheTransform.position, Input.mousePosition, dragSpeed * Time.deltaTime);
+            UpdateDrag();
         }
+
+        protected virtual void OnDragEnd(){}
+        protected virtual void OnDragStart(){}
+        protected virtual void UpdateDrag(){}
     }
 }

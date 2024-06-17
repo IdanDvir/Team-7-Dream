@@ -1,10 +1,11 @@
 using UnityEngine;
+using Utils;
 
 namespace MiniGames.FeedSmash
 {
     public class MiniGameFeedSmash : MinigameScreen
     {
-        [SerializeField] private DraggableObject bananaObject;
+        [SerializeField] private OnTargetReachedDraggable bananaObject;
         [SerializeField] private Transform targetTransform;
         [SerializeField] private float minDistanceToWin;
 
@@ -23,19 +24,12 @@ namespace MiniGames.FeedSmash
         public override void StartScreen()
         {
             base.StartScreen();
-            bananaObject.Activate(OnStopDrag);
+            bananaObject.Activate(OnReachedTarget, minDistanceToWin, targetTransform);
             Debug.Log("Started smash mini game");
         }
 
-        private void OnStopDrag()
+        private void OnReachedTarget()
         {
-            var distance = Vector3.Distance(bananaObject.transform.position, targetTransform.position);
-            Debug.Log("Stopped drag with " + distance);
-            if (distance > minDistanceToWin)
-            {
-                return;
-            }
-            
             bananaObject.Deactivate();
             stopwatch.Stop();
             OnWin();
