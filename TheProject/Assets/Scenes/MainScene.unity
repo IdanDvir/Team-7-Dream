@@ -322,3 +322,55 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2126950433
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2126950435}
+  - component: {fileID: 2126950434}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2126950434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126950433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3115dcb765b8841b2aa35fcf2f73316f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainMenu: {fileID: 5572586214984002208, guid: ca27fd0788d6a4b43967fc661e3ef959, type: 3}
+  victoryScreen: {fileID: 8330929792207200904, guid: 6e5fd305b56274da1bf40bc85cbf8f9a, type: 3}
+  lossScreen: {fileID: 6670266860473937174, guid: 2fb1e693b66904e10b80bfc024a01370, type: 3}
+  transitionScreen: {fileID: -1036256837583290111, guid: 4efec2a4797ee41d387ec2302f695563, type: 3}
+  minigames:
+  - {fileID: 1913499000722318350, guid: affd63401956f4b3db9eda0f57c7b56a, type: 3}
+  maxLives: 5
+  winsToWin: 1
+--- !u!4 &2126950435
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126950433}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.13332343, y: -0.020333134, z: 0.035265807}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

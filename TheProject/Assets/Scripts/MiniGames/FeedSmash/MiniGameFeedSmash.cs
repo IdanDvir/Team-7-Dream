@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using Utils;
 
@@ -9,15 +10,15 @@ namespace MiniGames.FeedSmash
         [SerializeField] private Transform targetTransform;
         [SerializeField] private float minDistanceToWin;
 
-        public override void OnShow()
+        public override async UniTask Show()
         {
-            base.OnShow();
+            await base.Show();
             gameObject.SetActive(true);
         }
 
-        public override void OnHide()
+        public override async UniTask Hide()
         {
-            base.OnHide();
+            await base.Hide();
             gameObject.SetActive(false);
         }
 

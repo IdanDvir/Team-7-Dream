@@ -22,13 +22,13 @@ public class MiniGameTester : MonoBehaviour
     private async UniTask StartMiniGame()
     {
         await UniTask.WaitForSeconds(showAfterSeconds);
-        minigameScreen.OnShow();
+        await minigameScreen.Show();
         await UniTask.WaitForSeconds(startAfterSeconds);
         minigameScreen.Win += OnWon;
         minigameScreen.Lose += OnLose;
         minigameScreen.StartScreen();
         await UniTask.WaitUntil(MinigameOver);
-        minigameScreen.OnHide();
+        await minigameScreen.Hide();
     }
 
     private bool MinigameOver()

@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Utils;
@@ -9,15 +10,16 @@ namespace MiniGames.ZiggyProbe
         [SerializeField] private DraggableObject ziggyObject;
         [SerializeField] private BoundMoveLeftRight boundTargetTransform;
         [SerializeField] private float minDistanceToWin;
-        public override void OnShow()
+        
+        public override async UniTask Show()
         {
-            base.OnShow();
+            base.Show();
             gameObject.SetActive(true);
         }
 
-        public override void OnHide()
+        public override async UniTask Hide()
         {
-            base.OnHide();
+            base.Hide();
             gameObject.SetActive(false);
         }
 

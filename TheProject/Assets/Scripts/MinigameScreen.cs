@@ -1,9 +1,11 @@
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 
 public delegate void OnGameComplete(); 
 
 public abstract class MinigameScreen : Screen
 {
+    public bool dont;
     public event OnGameComplete Win; 
     public event OnGameComplete Lose;
     
@@ -12,8 +14,9 @@ public abstract class MinigameScreen : Screen
     protected Stopwatch stopwatch;
     
     
-    public override void OnShow()
+    public override async UniTask Show()
     {
+        await base.Show();
         stopwatch ??= new Stopwatch(minigameLengthSeconds, OnTimerEnd, this);
     }
 
@@ -22,9 +25,12 @@ public abstract class MinigameScreen : Screen
         stopwatch.Start();
     }
 
-    public override void OnHide()
+    public override async UniTask Hide()
     {
+        await base.Hide();
         stopwatch.Stop();
+        Win = null;
+        Lose = null;
     }
 
     protected abstract void OnTimerEnd();

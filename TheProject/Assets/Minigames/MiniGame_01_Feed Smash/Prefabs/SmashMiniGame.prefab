@@ -150,6 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dee6b98a3be64e32b58cd9963aed92e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dont: 0
   minigameLengthSeconds: 5
   bananaObject: {fileID: 9011410699428399209}
   targetTransform: {fileID: 1913498999671595527}
@@ -244,7 +245,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dragSpeed: 50
-  axis: {x: 0, y: 0, z: 0}
+  axis: {x: 1, y: 1, z: 1}
 --- !u!1 &2198135118397811172
 GameObject:
   m_ObjectHideFlags: 0
