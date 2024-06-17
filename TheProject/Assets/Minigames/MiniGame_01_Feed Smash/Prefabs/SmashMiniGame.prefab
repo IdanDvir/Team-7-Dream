@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minigameLengthSeconds: 5
-  bananaObject: {fileID: 1913499000767508566}
+  bananaObject: {fileID: 9011410699428399209}
   targetTransform: {fileID: 1913498999671595527}
   minDistanceToWin: 300
 --- !u!1 &1913499000767508565
@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 1913499000767508569}
   - component: {fileID: 1913499000767508568}
   - component: {fileID: 1913499000767508567}
-  - component: {fileID: 1913499000767508566}
+  - component: {fileID: 9011410699428399209}
   m_Layer: 5
   m_Name: Banana
   m_TagString: Untagged
@@ -272,7 +272,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &1913499000767508566
+--- !u!114 &9011410699428399209
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -281,7 +281,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1913499000767508565}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9927221d9d5f4d558d215d04dcf29fe4, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f9df532880f457c97fa6e83c4d6c443, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dragSpeed: 5
+  dragSpeed: 50
