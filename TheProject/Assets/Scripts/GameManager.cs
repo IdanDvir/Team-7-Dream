@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
+using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Serialization;
 using Utils;
@@ -36,6 +37,29 @@ public class GameManager : MonoBehaviour
     [SerializeField] 
     private int winsToWin;
 
+    [SerializeField]
+    private AudioSource sfxSource;
+    
+    [SerializeField] 
+    private AudioSource mainTheme;
+
+    [SerializeField] 
+    private AudioSource gameTheme;
+
+    [SerializeField] 
+    private AudioClip doorsOpen;
+
+    [SerializeField] 
+    private AudioClip doorsClose;
+
+    [SerializeField] 
+    private AudioClip gameWon;
+
+    [SerializeField] 
+    private AudioClip gameLost;
+
+    [SerializeField] private float timeScaleDamp;
+    
     private Screen transitionInstance;
     private List<MinigameScreen> availableMinigames = new();
     private List<MinigameScreen> playedMinigames = new();
@@ -45,6 +69,7 @@ public class GameManager : MonoBehaviour
     private StopwatchView stopwatchView;
     private LifeView lifeView;
     private MiniGameTitleView miniGameTitleView;
+    private float gameThemeVolume;
 
     void Start()
     {
@@ -57,6 +82,7 @@ public class GameManager : MonoBehaviour
         transitionInstance = Instantiate(transitionScreen);
         transitionInstance.gameObject.SetActive(false);
         currentScreen = Instantiate(mainMenu);
+        mainTheme.Play();
         currentScreen.OnFinished += OnGameStart;
     }
 
@@ -70,6 +96,14 @@ public class GameManager : MonoBehaviour
 
     private async UniTask StartGame()
     {
+        mainTheme.DOFade(0.0f, 0.5f).onComplete += () =>
+        {
+            mainTheme.Stop();
+        };
+        gameThemeVolume = gameTheme.volume;
+        gameTheme.volume = 0.0f;
+        gameTheme.Play();
+        gameTheme.DOFade(gameThemeVolume, 0.5f);
         lives = maxLives;
         availableMinigames.Clear();
         availableMinigames.AddRange(minigames);
@@ -85,6 +119,8 @@ public class GameManager : MonoBehaviour
         stopwatchView.Pause();
         await UniTask.WaitForSeconds(currentScreen.hideDelay);
         transitionInstance.gameObject.SetActive(true);
+        sfxSource.PlayOneShot(doorsOpen);
+        gameTheme.DOFade(gameThemeVolume/2.0F, 0.5f);
         await transitionInstance.Show();
         lifeView.Set(lives);
         Destroy(prevScreen.gameObject);
@@ -93,6 +129,7 @@ public class GameManager : MonoBehaviour
         var minigame = currentScreen.GetComponent<MinigameScreen>();
         if (minigame)
         {
+            Time.timeScale += timeScaleDamp;
             stopwatchView.Reset();
             stopwatchView.gameObject.SetActive(true);
             lifeView.gameObject.SetActive(true);
@@ -109,7 +146,9 @@ public class GameManager : MonoBehaviour
         }
         
         await currentScreen.Show();
+        sfxSource.PlayOneShot(doorsClose);
         await transitionInstance.Hide();
+        gameTheme.DOFade(gameThemeVolume, 0.5f);
         if (minigame)
         {
             miniGameTitleView.gameObject.SetActive(true);
@@ -124,6 +163,7 @@ public class GameManager : MonoBehaviour
     private void OnMinigameLose()
     {
         lives -= 1;
+        sfxSource.PlayOneShot(gameLost);
         if (lives <= 0)
         {
             var nextMinigame = lossScreen;//;
@@ -139,6 +179,7 @@ public class GameManager : MonoBehaviour
     private void OnMinigameWin()
     {
         wins++;
+        sfxSource.PlayOneShot(gameWon);
         if (wins >= winsToWin)
         {
             var nextMinigame = victoryScreen;
