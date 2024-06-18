@@ -1,4 +1,3 @@
-using Sirenix.OdinInspector;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,28 +18,22 @@ namespace Game.Shaders {
         private static readonly int PropScaleY = Shader.PropertyToID("_ScaleY");
 
         private Image image;
-        [InfoBox("Image doesn't have a material with the shader " + RequiredShaderName + " assigned.",
-            InfoMessageType.Error, 
-            OdinIsValidExpression)]
-        [ShowInInspector, DisableIf(OdinIsValidExpression)]
+        
         public Color Color1 {
             get => GetColor(PropColor1);
             set => SetColor(PropColor1, value);
         }
 
-        [ShowInInspector, DisableIf(OdinIsValidExpression)]
         public Color Color2 {
             get => GetColor(PropColor2);
             set => SetColor(PropColor2, value);
         }
 
-        [ShowInInspector, DisableIf(OdinIsValidExpression), PropertyRange(0, 1)]
         public float Hardness {
             get => IsValid() ? image.materialForRendering.GetFloat(PropHardness) : 0;
             set => SetFloat(PropHardness, value);
         }
 
-        [ShowInInspector, DisableIf(OdinIsValidExpression)]
         public Vector2 Center {
             get => IsValid()
                     ? new Vector2(GetFloat(PropCenterX), GetFloat(PropCenterY))
@@ -53,13 +46,11 @@ namespace Game.Shaders {
             }
         }
 
-        [ShowInInspector, DisableIf(OdinIsValidExpression), PropertyRange(0, 3)]
         public float ScaleX {
             get => GetFloat(PropScaleX, 1);
             set => SetFloat(PropScaleX, value);
         }
 
-        [ShowInInspector, DisableIf(OdinIsValidExpression), PropertyRange(0, 3)]
         public float ScaleY {
             get => GetFloat(PropScaleY, 1);
             set => SetFloat(PropScaleY, value);
