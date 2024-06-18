@@ -76,6 +76,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+        Application.targetFrameRate = 120;
         miniGameTitleView= Instantiate(miniGameTitleViewPrefab);
         miniGameTitleView.gameObject.SetActive(false);
         lifeView = Instantiate(lifeViewPrefab);

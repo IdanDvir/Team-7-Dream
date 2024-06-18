@@ -46,7 +46,7 @@ namespace MiniGames.LIFTOFF
             }
 
             var force = isLaunching ? acceleration : -acceleration;
-            gizmo.AddForce(Vector3.up * force);
+            gizmo.AddForce(Vector3.up * force * Time.deltaTime);
 
             if (gizmo.transform.position.y >= ziggy.transform.position.y)
             {
@@ -56,7 +56,7 @@ namespace MiniGames.LIFTOFF
                 OnWin();
                 isActive = false;
                 var direction = Random.Range(0, 1) == 1 ? Vector3.left : Vector3.right;
-                gizmo.AddForce((Vector3.up + direction) * 1000);
+                gizmo.AddForce((Vector3.up + direction) * 100000 * Time.deltaTime);
             }
         }
     }
