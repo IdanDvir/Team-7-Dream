@@ -147,8 +147,8 @@ public class GameManager : MonoBehaviour
         
         await currentScreen.Show();
         sfxSource.PlayOneShot(doorsClose);
-        await transitionInstance.Hide();
         gameTheme.DOFade(gameThemeVolume, 0.5f);
+        await transitionInstance.Hide();
         if (minigame)
         {
             miniGameTitleView.gameObject.SetActive(true);
