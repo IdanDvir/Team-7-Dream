@@ -29,8 +29,9 @@ public abstract class MinigameScreen : Screen
 
     public override async UniTask Hide()
     {
-        await base.Hide();
         stopwatch.Stop();
+        await base.Hide();
+        
         Win = null;
         Lose = null;
     }

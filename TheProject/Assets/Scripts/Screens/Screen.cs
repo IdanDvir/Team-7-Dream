@@ -5,6 +5,7 @@ using Utils;
 public delegate void OnFinished();
 public abstract class Screen : MonoBehaviour
 {
+    [SerializeField] public float hideDelay = 0;
     public event OnFinished OnFinished;
     public UniTaskCompletionSource OnFinishedTask = new UniTaskCompletionSource();
     
@@ -15,9 +16,10 @@ public abstract class Screen : MonoBehaviour
 
     public virtual async UniTask Hide()
     {
+        
+    await UniTask.WaitForSeconds(hideDelay);
         OnFinished?.Invoke();
         OnFinished = null;
-        await UniTask.CompletedTask;
     }
     
     public abstract void StartScreen(StopwatchView stopWatchView);

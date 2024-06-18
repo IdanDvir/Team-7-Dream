@@ -75,7 +75,9 @@ public class GameManager : MonoBehaviour
     private async UniTask SwitchTo(Screen screen)
     {
         var prevScreen = currentScreen;
-
+        
+        stopwatchView.Pause();
+        await UniTask.WaitForSeconds(currentScreen.hideDelay);
         transitionInstance.gameObject.SetActive(true);
         await transitionInstance.Show();
         lifeView.Set(lives);

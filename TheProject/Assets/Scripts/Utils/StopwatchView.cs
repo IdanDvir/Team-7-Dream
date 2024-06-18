@@ -16,6 +16,16 @@ namespace Utils
             this.stopwatch = stopwatch;
             isActive = true;
         }
+        
+        public void Pause()
+        {
+            isActive = false;
+        }
+        
+        public void Continue()
+        {
+            isActive = true;
+        }
 
         public void Reset()
         {

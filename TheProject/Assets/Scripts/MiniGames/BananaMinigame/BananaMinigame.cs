@@ -48,7 +48,7 @@ namespace MiniGames.BananaMinigame
                 yDragDiff = 0;
                 isDragging = false;
                 bananananana.sprite = banananananaBananananas[currentBanananana];
-                if (currentBanananana == banananananaBananananas.Count)
+                if (currentBanananana == banananananaBananananas.Count - 1)
                 {
                     isActive = false;
                     OnWin();
