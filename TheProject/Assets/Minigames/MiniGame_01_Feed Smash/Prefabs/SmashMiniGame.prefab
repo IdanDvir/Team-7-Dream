@@ -411,6 +411,7 @@ GameObject:
   - component: {fileID: 5859151788580582753}
   - component: {fileID: 3445918899377179138}
   - component: {fileID: 8958539503463450976}
+  - component: {fileID: 1044858803067844025}
   m_Layer: 5
   m_Name: Smash
   m_TagString: Untagged
@@ -477,6 +478,23 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!111 &1044858803067844025
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2591814049013942977}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: 7f817a779f8f5864e89a24347b6b4594, type: 2}
+  - {fileID: 7400000, guid: b3497811598c089488102610f92eb493, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &3597612233189879112
 GameObject:
   m_ObjectHideFlags: 0
