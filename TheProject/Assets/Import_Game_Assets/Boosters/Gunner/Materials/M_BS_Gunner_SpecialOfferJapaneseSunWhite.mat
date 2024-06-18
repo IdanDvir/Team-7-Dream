@@ -27,12 +27,12 @@ Material:
     m_Ints: []
     m_Floats:
     - _AnimSpin: 1.1
-    - _BurnColorThreshold: 0.619
+    - _BurnColorThreshold: 0
     - _CircleMask: 0.948
     - _Shape: 2.29
     - _ShapeAmount: -0.15
     - _ShapeEdge: 0.24
-    - _Size: 17.7
+    - _Size: 32.5
     m_Colors:
-    - _BurnColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BurnColor: {r: 0.4481132, g: 0.93074363, b: 1, a: 1}
   m_BuildTextureStacks: []
