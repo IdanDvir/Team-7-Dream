@@ -1,5 +1,7 @@
+using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.UI;
 using Utils;
 
 namespace MiniGames.SumoWrestling
@@ -9,10 +11,22 @@ namespace MiniGames.SumoWrestling
         [SerializeField] private Clickable wrestlers;
         [SerializeField] private GameObject deathLeft;
         [SerializeField] private GameObject deathRight;
+        [SerializeField] private List<Sprite> heads;
+        [SerializeField] private Image blueHead;
+        [SerializeField] private Image redHead;
         
         public override async UniTask Show()
         {
             await base.Show();
+            var randomBlueHead = Random.Range(0, heads.Count);
+            var randomRedHead = Random.Range(0, heads.Count);
+            
+            while (randomRedHead == randomBlueHead)
+            {
+                randomRedHead = Random.Range(0, heads.Count);
+            }
+            blueHead.sprite = heads[randomBlueHead];
+            redHead.sprite = heads[randomRedHead];
             gameObject.SetActive(true);
         }
 

@@ -85,9 +85,9 @@ public class GameManager : MonoBehaviour
             playedMinigames.Add(screen as MinigameScreen);
         }
         
+        await currentScreen.Show();
         await transitionInstance.Hide();
         transitionInstance.gameObject.SetActive(false);
-        await currentScreen.Show();
 
         currentScreen.StartScreen(stopwatchView);
     }

@@ -35,9 +35,9 @@ namespace MiniGames.BreakALeg
             gameObject.SetActive(false);
         }
 
-        public override void StartScreen()
+        public override void StartScreen(StopwatchView stopWatchView)
         {
-            base.StartScreen();
+            base.StartScreen(stopWatchView);
             bellaRinaEvents = bellaRina.GetComponent<CollisionEvents>();
             bellaRinaEvents.TriggerEnter += OnBellaRinaTriggered;
             bouncyBounce.Activate();
