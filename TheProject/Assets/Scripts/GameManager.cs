@@ -18,8 +18,11 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Screen transitionScreen;
 
-    [FormerlySerializedAs("stopwatchView")] [SerializeField] 
+    [SerializeField] 
     private StopwatchView stopwatchViewPrefab;
+
+    [SerializeField] 
+    private LifeView lifeViewPrefab;
     
     [SerializeField]
     private List<MinigameScreen> minigames;
@@ -37,9 +40,12 @@ public class GameManager : MonoBehaviour
     private int lives;
     private int wins;
     private StopwatchView stopwatchView;
+    private LifeView lifeView;
 
     void Start()
     {
+        lifeView = Instantiate(lifeViewPrefab);
+        lifeView.gameObject.SetActive(false);
         stopwatchView = Instantiate(stopwatchViewPrefab);
         stopwatchView.gameObject.SetActive(false);
         transitionInstance = Instantiate(transitionScreen);
@@ -72,6 +78,7 @@ public class GameManager : MonoBehaviour
 
         transitionInstance.gameObject.SetActive(true);
         await transitionInstance.Show();
+        lifeView.Set(lives);
         Destroy(prevScreen.gameObject);
         currentScreen = Instantiate(screen);
 
@@ -80,9 +87,15 @@ public class GameManager : MonoBehaviour
         {
             stopwatchView.Reset();
             stopwatchView.gameObject.SetActive(true);
+            lifeView.gameObject.SetActive(true);
             minigame.Win += OnMinigameWin;
             minigame.Lose += OnMinigameLose;
             playedMinigames.Add(screen as MinigameScreen);
+        }
+        else
+        {
+            lifeView.gameObject.SetActive(false);
+            stopwatchView.gameObject.SetActive(false);
         }
         
         await currentScreen.Show();
@@ -97,7 +110,6 @@ public class GameManager : MonoBehaviour
         lives -= 1;
         if (lives <= 0)
         {
-            stopwatchView.gameObject.SetActive(false);
             var nextMinigame = lossScreen;//;
             var task = SwitchTo(nextMinigame);
         }
@@ -113,8 +125,7 @@ public class GameManager : MonoBehaviour
         wins++;
         if (wins >= winsToWin)
         {
-            stopwatchView.gameObject.SetActive(false);
-            var nextMinigame = victoryScreen;//PickRandomMinigame(availableMinigames);
+            var nextMinigame = victoryScreen;
             var task = SwitchTo(nextMinigame);
         }
         else
