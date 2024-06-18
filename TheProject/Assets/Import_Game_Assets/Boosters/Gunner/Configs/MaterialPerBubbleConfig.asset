@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d05e9ab8615414180c42ef9b24d80e5, type: 3}
+  m_Name: MaterialPerBubbleConfig
+  m_EditorClassIdentifier: 
+  remotePlayer: {fileID: 2100000, guid: 0f97bcd468a684942bc63c436e8effee, type: 2}
+  localPlayer: {fileID: 2100000, guid: 483d68aea2ff8bf45998661287868513, type: 2}
+  green: {fileID: 2100000, guid: a1df43a0c98331143a8d4f574460097c, type: 2}
+  yellow: {fileID: 2100000, guid: 08353bdc92f0c57438932e28928e1e47, type: 2}
+  invalid: {fileID: 0}

@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9704b2121d17414ab14c4dc16c2fbf3b, type: 3}
+  m_Name: GeneralMustacheProjectileAnimationProvider
+  m_EditorClassIdentifier: 
+  id: d59346b3e813cef45b35a3018e884184
+  Prefab: {fileID: 8078048432937490584, guid: e0fa5ad9b5284614fac581efade813ab, type: 3}
