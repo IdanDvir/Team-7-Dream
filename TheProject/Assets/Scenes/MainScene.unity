@@ -327,12 +327,14 @@ MonoBehaviour:
   transitionScreen: {fileID: -1036256837583290111, guid: 4efec2a4797ee41d387ec2302f695563, type: 3}
   stopwatchViewPrefab: {fileID: 6912109312502459031, guid: 907a07cf25c68481c8b79e6adbf0c553, type: 3}
   lifeViewPrefab: {fileID: 7429380709984862411, guid: add440f67210240e89290a4df3d545bb, type: 3}
+  miniGameTitleViewPrefab: {fileID: 8682182276669858600, guid: c543dfba6c771466895ec251d30cc9d2, type: 3}
   minigames:
   - {fileID: 1913499000722318350, guid: affd63401956f4b3db9eda0f57c7b56a, type: 3}
   - {fileID: 758308870878890051, guid: 1b6c62f42a7cb4895b7b8b0da356458e, type: 3}
   - {fileID: 2132286706201566141, guid: 3fd375c78cc17491dba015e81c8c5eb4, type: 3}
   - {fileID: 7924852117093075798, guid: 50d93b4505c7a40e9b0aa51aecf583ba, type: 3}
   - {fileID: 7616447277708089114, guid: d38dc26d2cae845aca585d2a06f1e83a, type: 3}
+  - {fileID: 1039060501904179696, guid: cc49f91aa7e4d4ff48028db3710f571c, type: 3}
   maxLives: 3
   winsToWin: 5
 --- !u!4 &2126950435
