@@ -12,9 +12,12 @@ public abstract class MinigameScreen : Screen
     
     [SerializeField]
     private int minigameLengthSeconds;
+
+    [SerializeField] private string title;
+    
     protected Stopwatch stopwatch;
-    
-    
+
+    public string Title => title;
     public override async UniTask Show()
     {
         await base.Show();

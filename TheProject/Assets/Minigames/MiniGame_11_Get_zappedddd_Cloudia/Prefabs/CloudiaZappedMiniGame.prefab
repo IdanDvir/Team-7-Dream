@@ -300,6 +300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dont: 0
   minigameLengthSeconds: 7
+  title: GET ZAPPED!!
   tentaclesObject: {fileID: 511574471623997961}
   cloudiaTransform: {fileID: 2132286706173284329}
   lightningTimings: 010000000300000005000000

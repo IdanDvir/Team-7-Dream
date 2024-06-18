@@ -206,7 +206,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7da591dad574e8fb0184ced23e39297, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dont: 0
   minigameLengthSeconds: 10
+  title: PRoBE!!
   ziggyObject: {fileID: 7616447277679870774}
   boundTargetTransform: {fileID: 8303814461146855122}
   minDistanceToWin: 300

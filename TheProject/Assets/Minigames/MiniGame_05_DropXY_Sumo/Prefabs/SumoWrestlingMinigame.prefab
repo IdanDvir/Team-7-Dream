@@ -756,6 +756,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dont: 0
   minigameLengthSeconds: 20
+  title: DROP THE RED!!
   wrestlers: {fileID: 7924852115985584997}
   deathLeft: {fileID: 7924852115931202540}
   deathRight: {fileID: 7924852116360532669}
