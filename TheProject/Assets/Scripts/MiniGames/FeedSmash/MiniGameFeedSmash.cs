@@ -22,9 +22,9 @@ namespace MiniGames.FeedSmash
             gameObject.SetActive(false);
         }
 
-        public override void StartScreen()
+        public override void StartScreen(StopwatchView stopWatchView)
         {
-            base.StartScreen();
+            base.StartScreen(stopWatchView);
             bananaObject.Activate(OnReachedTarget, minDistanceToWin, targetTransform);
             Debug.Log("Started smash mini game");
         }

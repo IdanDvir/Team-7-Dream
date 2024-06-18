@@ -1,5 +1,6 @@
 using Cysharp.Threading.Tasks;
 using UnityEngine;
+using Utils;
 
 public delegate void OnGameComplete(); 
 
@@ -20,9 +21,10 @@ public abstract class MinigameScreen : Screen
         stopwatch ??= new Stopwatch(minigameLengthSeconds, OnTimerEnd, this);
     }
 
-    public override void StartScreen()
+    public override void StartScreen(StopwatchView stopWatchView)
     {
         stopwatch.Start();
+        stopWatchView.Activate(stopwatch);
     }
 
     public override async UniTask Hide()

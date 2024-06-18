@@ -1,8 +1,8 @@
-using System.Collections;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Serialization;
+using Utils;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,6 +17,9 @@ public class GameManager : MonoBehaviour
     
     [SerializeField]
     private Screen transitionScreen;
+
+    [FormerlySerializedAs("stopwatchView")] [SerializeField] 
+    private StopwatchView stopwatchViewPrefab;
     
     [SerializeField]
     private List<MinigameScreen> minigames;
@@ -33,9 +36,12 @@ public class GameManager : MonoBehaviour
     private Screen currentScreen;
     private int lives;
     private int wins;
-    
+    private StopwatchView stopwatchView;
+
     void Start()
     {
+        stopwatchView = Instantiate(stopwatchViewPrefab);
+        stopwatchView.gameObject.SetActive(false);
         transitionInstance = Instantiate(transitionScreen);
         transitionInstance.gameObject.SetActive(false);
         currentScreen = Instantiate(mainMenu);
@@ -72,6 +78,8 @@ public class GameManager : MonoBehaviour
         var minigame = currentScreen.GetComponent<MinigameScreen>();
         if (minigame)
         {
+            stopwatchView.Reset();
+            stopwatchView.gameObject.SetActive(true);
             minigame.Win += OnMinigameWin;
             minigame.Lose += OnMinigameLose;
             playedMinigames.Add(screen as MinigameScreen);
@@ -80,7 +88,8 @@ public class GameManager : MonoBehaviour
         await transitionInstance.Hide();
         transitionInstance.gameObject.SetActive(false);
         await currentScreen.Show();
-        currentScreen.StartScreen();
+
+        currentScreen.StartScreen(stopwatchView);
     }
 
     private void OnMinigameLose()
@@ -88,6 +97,7 @@ public class GameManager : MonoBehaviour
         lives -= 1;
         if (lives <= 0)
         {
+            stopwatchView.gameObject.SetActive(false);
             var nextMinigame = lossScreen;//;
             var task = SwitchTo(nextMinigame);
         }
@@ -103,6 +113,7 @@ public class GameManager : MonoBehaviour
         wins++;
         if (wins >= winsToWin)
         {
+            stopwatchView.gameObject.SetActive(false);
             var nextMinigame = victoryScreen;//PickRandomMinigame(availableMinigames);
             var task = SwitchTo(nextMinigame);
         }

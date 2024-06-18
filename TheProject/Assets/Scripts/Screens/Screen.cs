@@ -1,5 +1,6 @@
 using Cysharp.Threading.Tasks;
 using UnityEngine;
+using Utils;
 
 public delegate void OnFinished();
 public abstract class Screen : MonoBehaviour
@@ -19,5 +20,5 @@ public abstract class Screen : MonoBehaviour
         await UniTask.CompletedTask;
     }
     
-    public abstract void StartScreen();
+    public abstract void StartScreen(StopwatchView stopWatchView);
 }

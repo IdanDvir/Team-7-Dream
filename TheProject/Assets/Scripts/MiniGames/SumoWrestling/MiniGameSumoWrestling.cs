@@ -22,9 +22,9 @@ namespace MiniGames.SumoWrestling
             gameObject.SetActive(false);
         }
 
-        public override void StartScreen()
+        public override void StartScreen(StopwatchView stopWatchView)
         {
-            base.StartScreen();
+            base.StartScreen(stopWatchView);
             wrestlers.Activate();
             wrestlers.Triggered2D += OnTriggered2D;
         }

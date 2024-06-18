@@ -48,9 +48,9 @@ namespace MiniGames.CloudiaZapped
             gameObject.SetActive(false);
         }
 
-        public override void StartScreen()
+        public override void StartScreen(StopwatchView stopWatchView)
         {
-            base.StartScreen();
+            base.StartScreen(stopWatchView);
             tentaclesObject.Activate();
             cloudiaTransform.Activate();
             foreach (var lightningStopwatch in lightningStopwatches)

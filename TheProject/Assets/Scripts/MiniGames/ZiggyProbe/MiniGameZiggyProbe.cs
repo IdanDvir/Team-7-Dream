@@ -23,9 +23,9 @@ namespace MiniGames.ZiggyProbe
             gameObject.SetActive(false);
         }
 
-        public override void StartScreen()
+        public override void StartScreen(StopwatchView stopWatchView)
         {
-            base.StartScreen();
+            base.StartScreen(stopWatchView);
             ziggyObject.Activate();
             boundTargetTransform.Activate();
             Debug.Log("Started Ziggy mini game.");

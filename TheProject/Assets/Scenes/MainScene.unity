@@ -325,6 +325,7 @@ MonoBehaviour:
   victoryScreen: {fileID: 8330929792207200904, guid: 6e5fd305b56274da1bf40bc85cbf8f9a, type: 3}
   lossScreen: {fileID: 6670266860473937174, guid: 2fb1e693b66904e10b80bfc024a01370, type: 3}
   transitionScreen: {fileID: -1036256837583290111, guid: 4efec2a4797ee41d387ec2302f695563, type: 3}
+  stopwatchViewPrefab: {fileID: 6912109312502459031, guid: 907a07cf25c68481c8b79e6adbf0c553, type: 3}
   minigames:
   - {fileID: 1913499000722318350, guid: affd63401956f4b3db9eda0f57c7b56a, type: 3}
   - {fileID: 758308870878890051, guid: 1b6c62f42a7cb4895b7b8b0da356458e, type: 3}

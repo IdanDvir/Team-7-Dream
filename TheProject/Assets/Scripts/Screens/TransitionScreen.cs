@@ -1,12 +1,13 @@
 using Cysharp.Threading.Tasks;
 using UnityEngine;
+using Utils;
 
 public class TransitionScreen : Screen
 {
     [SerializeField] private Animator transitionAnimator;
     private static readonly int Out = Animator.StringToHash("Out");
 
-    public override void StartScreen()
+    public override void StartScreen(StopwatchView stopWatchView)
     {
         
     }

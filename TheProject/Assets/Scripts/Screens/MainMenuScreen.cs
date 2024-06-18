@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using Utils;
 
 public class MainMenuScreen : Screen
 {
@@ -16,7 +17,7 @@ public class MainMenuScreen : Screen
         var task = Hide();
     }
 
-    public override void StartScreen()
+    public override void StartScreen(StopwatchView stopWatchView)
     {
     }
 }

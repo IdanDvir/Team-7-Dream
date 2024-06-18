@@ -1,5 +1,6 @@
 using Cysharp.Threading.Tasks;
 using UnityEngine;
+using Utils;
 
 namespace MiniGames.TentaclesExplode
 {
@@ -38,9 +39,9 @@ namespace MiniGames.TentaclesExplode
             OnLose();
         }
 
-        public override void StartScreen()
+        public override void StartScreen(StopwatchView stopWatchView)
         {
-            base.StartScreen();
+            base.StartScreen(stopWatchView);
             StartGame().Forget();
         }
 

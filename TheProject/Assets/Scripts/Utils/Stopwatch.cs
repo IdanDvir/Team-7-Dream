@@ -8,8 +8,16 @@ public class Stopwatch
     private Action onStop;
     private MonoBehaviour context;
     private Coroutine countdownCoroutine;
-    
     private float endTime;
+    private float startTime;
+
+    public float Ratio()
+    {
+        var timeUntillEnd = endTime - Time.time;
+        var totalTime = endTime - startTime;
+        return timeUntillEnd / totalTime;
+    }
+
     public Stopwatch(int seconds, Action onStop, MonoBehaviour context)
     {
         this.onStop = onStop;
@@ -19,6 +27,7 @@ public class Stopwatch
     
     public void Start()
     {
+        startTime = Time.time;
         endTime = Time.time + seconds;
         countdownCoroutine = context.StartCoroutine(Countdown());
     }
