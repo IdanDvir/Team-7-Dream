@@ -1,6 +1,8 @@
+using System.Collections;
 using System.Collections.Generic;
 using Cysharp.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.UI;
 using Utils;
 
 namespace MiniGames.CloudiaZapped
@@ -9,6 +11,11 @@ namespace MiniGames.CloudiaZapped
     {
         [SerializeField] private DraggableObject tentaclesObject;
         [SerializeField] private BoundMoveLeftRight cloudiaTransform;
+        [SerializeField] private Image cloudiaImage;
+        [SerializeField] private Sprite cloudiaHapy;
+        [SerializeField] private Sprite cloudiaAngy;
+        [SerializeField] private GameObject lightningBolt;
+        [SerializeField] private GameObject lightningBoltSmall;
         [SerializeField] private int[] lightningTimings;
         [SerializeField] private float minDistanceToLose;
 
@@ -24,12 +31,27 @@ namespace MiniGames.CloudiaZapped
             }
         }
 
+        public async UniTask Angy()
+        {
+            cloudiaImage.sprite = cloudiaAngy;
+            await UniTask.WaitForSeconds(0.1f);
+            lightningBoltSmall.SetActive(true);
+            await UniTask.WaitForSeconds(0.35f);
+            lightningBoltSmall.SetActive(false);
+            await UniTask.WaitForSeconds(0.15f);
+            lightningBolt.SetActive(true);
+            await UniTask.WaitForSeconds(0.15f);
+            lightningBolt.SetActive(false);
+            cloudiaImage.sprite = cloudiaHapy;
+        }
+
         private void FireLightning()
         {
             var cloudiaPosition = tentaclesObject.transform.position;
             var targetPosition = cloudiaTransform.transform.position;
             var cloudiaPlanarPosition = new Vector3(cloudiaPosition.x, targetPosition.y, targetPosition.z);
             var distance = Vector3.Distance(cloudiaPlanarPosition, targetPosition);
+            Angy().Forget();
             if (distance > minDistanceToLose) return;
             
             tentaclesObject.Deactivate();

@@ -32,7 +32,6 @@ namespace MiniGames.Poke
                 OWWW.SetActive(true);
                 OnWin();
             }
-                
         }
     }
 }

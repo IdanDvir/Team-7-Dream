@@ -14,12 +14,21 @@ public abstract class Screen : MonoBehaviour
         await UniTask.CompletedTask;
     }
 
+    public virtual async UniTask DoExtraStart()
+    {
+        await UniTask.CompletedTask;
+    }
+    
+    public virtual async UniTask DoExtraEnd()
+    {
+        await UniTask.CompletedTask;
+    }
+
     public virtual async UniTask Hide()
     {
-        
-    await UniTask.WaitForSeconds(hideDelay);
-        OnFinished?.Invoke();
-        OnFinished = null;
+        await UniTask.WaitForSeconds(hideDelay);
+            OnFinished?.Invoke();
+            OnFinished = null;
     }
     
     public abstract void StartScreen(StopwatchView stopWatchView);
