@@ -191,9 +191,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec337f6eacf4c4cb6fc709b7ab7fe4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hideDelay: 0.7
   dont: 0
-  hideDelay: 2
   minigameLengthSeconds: 5
+  title: 
   THE_EYE: {fileID: 9033195051373191945}
   OWWW: {fileID: 3093706014873029716}
 --- !u!1 &9033195051373191945
