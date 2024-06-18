@@ -21,12 +21,11 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_BS_Airdrop_MajorMustache_Prop_Radio_Body
-  m_Shader: {fileID: -6465566751694194690, guid: d6fe0ec327a8cf347a3ff094d74b60e7,
-    type: 3}
-  m_ValidKeywords:
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_ValidKeywords: []
+  m_InvalidKeywords:
   - _MAIN_LIGHT_SHADOWS
   - _SHADOWS_SOFT
-  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -69,7 +68,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: cdc8b1d277ec72f41bfa8702bef59407, type: 3}
+        m_Texture: {fileID: 2800000, guid: 0fa5eb19b633e26408d5433d7240635f, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Matcap:
