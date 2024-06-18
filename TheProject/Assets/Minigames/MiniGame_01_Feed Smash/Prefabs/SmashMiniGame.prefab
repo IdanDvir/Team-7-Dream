@@ -152,6 +152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dont: 0
   minigameLengthSeconds: 5
+  title: FEED SMASH!!
   bananaObject: {fileID: 9011410699428399209}
   targetTransform: {fileID: 1913498999671595527}
   minDistanceToWin: 300

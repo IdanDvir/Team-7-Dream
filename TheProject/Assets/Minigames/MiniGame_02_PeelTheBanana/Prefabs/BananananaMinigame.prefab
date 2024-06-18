@@ -116,6 +116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dont: 0
   minigameLengthSeconds: 5
+  title: Peel!!!
   bananananana: {fileID: 7772774833145672509}
   banananananaBananananas:
   - {fileID: 21300000, guid: 899e9648925654381858b61f23778a75, type: 3}

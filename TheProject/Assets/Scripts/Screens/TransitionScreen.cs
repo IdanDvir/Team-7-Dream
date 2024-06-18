@@ -22,6 +22,6 @@ public class TransitionScreen : Screen
     {
         await base.Hide();
         transitionAnimator.SetTrigger(Out);
-        await UniTask.WaitForSeconds(2);
+        await UniTask.WaitForSeconds(1);
     }
 }

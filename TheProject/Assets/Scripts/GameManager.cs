@@ -23,6 +23,9 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] 
     private LifeView lifeViewPrefab;
+
+    [SerializeField]
+    private MiniGameTitleView miniGameTitleViewPrefab;
     
     [SerializeField]
     private List<MinigameScreen> minigames;
@@ -41,9 +44,12 @@ public class GameManager : MonoBehaviour
     private int wins;
     private StopwatchView stopwatchView;
     private LifeView lifeView;
+    private MiniGameTitleView miniGameTitleView;
 
     void Start()
     {
+        miniGameTitleView= Instantiate(miniGameTitleViewPrefab);
+        miniGameTitleView.gameObject.SetActive(false);
         lifeView = Instantiate(lifeViewPrefab);
         lifeView.gameObject.SetActive(false);
         stopwatchView = Instantiate(stopwatchViewPrefab);
@@ -93,15 +99,23 @@ public class GameManager : MonoBehaviour
             minigame.Win += OnMinigameWin;
             minigame.Lose += OnMinigameLose;
             playedMinigames.Add(screen as MinigameScreen);
+            minigame.dont = Random.Range(0.0f, 100.0f) > 50.0f;
         }
         else
         {
             lifeView.gameObject.SetActive(false);
             stopwatchView.gameObject.SetActive(false);
+            miniGameTitleView.gameObject.SetActive(false);
         }
         
         await currentScreen.Show();
         await transitionInstance.Hide();
+        if (minigame)
+        {
+            miniGameTitleView.gameObject.SetActive(true);
+            await miniGameTitleView.Show(minigame.Title, minigame.dont);
+            miniGameTitleView.gameObject.SetActive(false);
+        }
         transitionInstance.gameObject.SetActive(false);
 
         currentScreen.StartScreen(stopwatchView);

@@ -597,6 +597,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dont: 0
   minigameLengthSeconds: 20
+  title: BREAK A LEG!!
   death: {fileID: 470538584050504188}
   win: {fileID: 470538584480063258}
   bouncyBounce: {fileID: 470538582585530450}
