@@ -20,6 +20,7 @@ namespace MiniGames.BreakALeg
 
         private Vector3 oldGravity;
         private CollisionEvents bellaRinaEvents;
+        private float previousTimescape;
         
         public override async UniTask Show()
         {
@@ -31,7 +32,7 @@ namespace MiniGames.BreakALeg
         {
             await base.Hide();
             Physics.gravity = oldGravity;
-            Time.timeScale = 1;
+            Time.timeScale = Time.timeScale;
             gameObject.SetActive(false);
         }
 
@@ -42,7 +43,8 @@ namespace MiniGames.BreakALeg
             bellaRinaEvents.TriggerEnter += OnBellaRinaTriggered;
             bouncyBounce.Activate();
             bellaRina.useGravity = true;
-            Time.timeScale = 2;
+            previousTimescape = Time.timeScale;
+            Time.timeScale += 2;
             oldGravity = Physics.gravity;
             Physics.gravity = Vector3.down * gravityForce;
             var startingXForce = Random.Range(startXForceMin, startXForceMax) * bellaRina.mass;
@@ -55,6 +57,8 @@ namespace MiniGames.BreakALeg
         {
             if (other.gameObject == death)
             {
+                Physics.gravity = oldGravity;
+                Time.timeScale = Time.timeScale;
                 bellaRina.useGravity = false;
                 bellaRina.velocity = Vector3.zero;
                 OnLose();
@@ -62,6 +66,8 @@ namespace MiniGames.BreakALeg
 
             if (other.gameObject == win)
             {
+                Physics.gravity = oldGravity;
+                Time.timeScale = Time.timeScale;
                 bellaRina.useGravity = false;
                 bellaRina.velocity = Vector3.zero;
                 OnWin();
@@ -78,6 +84,8 @@ namespace MiniGames.BreakALeg
 
         protected override void OnTimerEnd()
         {
+            Physics.gravity = oldGravity;
+            Time.timeScale = Time.timeScale;
             OnLose();
         }
     }
