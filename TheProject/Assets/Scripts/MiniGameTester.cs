@@ -1,11 +1,13 @@
 using Cysharp.Threading.Tasks;
 using UnityEngine;
+using Utils;
 
 public class MiniGameTester : MonoBehaviour
 {
     [SerializeField] private float showAfterSeconds;
     [SerializeField] private float startAfterSeconds;
     [SerializeField] private MinigameScreen minigameScreen;
+    [SerializeField] private StopwatchView view;
     private bool minigameLost;
     private bool minigameWon;
 
@@ -26,7 +28,7 @@ public class MiniGameTester : MonoBehaviour
         await UniTask.WaitForSeconds(startAfterSeconds);
         minigameScreen.Win += OnWon;
         minigameScreen.Lose += OnLose;
-        // minigameScreen.StartScreen();
+        minigameScreen.StartScreen(view);
         await UniTask.WaitUntil(MinigameOver);
         await UniTask.WaitForSeconds(2);
         await minigameScreen.Hide();

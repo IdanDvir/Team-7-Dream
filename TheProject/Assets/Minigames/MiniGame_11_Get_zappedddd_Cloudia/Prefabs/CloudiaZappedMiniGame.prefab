@@ -298,10 +298,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c0b6a979dd45b48713f97987fdd396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hideDelay: 0
   dont: 0
-  minigameLengthSeconds: 7
-  title: GET ZAPPED!!
+  minigameLengthSeconds: 5
+  title: RUN!!
   tentaclesObject: {fileID: 511574471623997961}
   cloudiaTransform: {fileID: 2132286706173284329}
-  lightningTimings: 010000000300000005000000
+  lightningTimings: 010000000200000004000000
   minDistanceToLose: 40

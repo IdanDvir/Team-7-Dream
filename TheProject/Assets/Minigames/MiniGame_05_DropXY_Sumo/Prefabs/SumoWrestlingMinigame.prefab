@@ -754,9 +754,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a60f561d2204eb4bf6ccc8d9dff4edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hideDelay: 0
   dont: 0
-  minigameLengthSeconds: 20
-  title: DROP THE RED!!
+  minigameLengthSeconds: 5
+  title: DROP THE BLUE!!
   wrestlers: {fileID: 7924852115985584997}
   deathLeft: {fileID: 7924852115931202540}
   deathRight: {fileID: 7924852116360532669}
