@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9704b2121d17414ab14c4dc16c2fbf3b, type: 3}
+  m_Name: SAAP_BS_Airdrop_MiniGame_Frame
+  m_EditorClassIdentifier: 
+  id: fd8ef6f83e01f4d898cc106e40cdb6dd
+  Prefab: {fileID: 1087519455483605627, guid: 094354327124146b2bfd3ac59b4ba97c, type: 3}
