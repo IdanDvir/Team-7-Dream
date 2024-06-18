@@ -37,11 +37,17 @@ public abstract class MinigameScreen : Screen
 
     protected void OnWin()
     {
-        Win?.Invoke();
+        if (dont)
+            Lose?.Invoke();
+        else
+            Win?.Invoke();
     }
 
     protected void OnLose()
     {
-        Lose?.Invoke();
+        if (dont)
+            Win?.Invoke();
+        else
+            Lose?.Invoke();
     }
 }
