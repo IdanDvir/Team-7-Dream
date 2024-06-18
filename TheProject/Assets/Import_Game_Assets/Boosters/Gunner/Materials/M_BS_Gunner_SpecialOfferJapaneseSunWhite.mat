@@ -26,13 +26,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AnimSpin: 7
-    - _BurnColorThreshold: 0.693
-    - _CircleMask: 0.649
-    - _Shape: 2.53
-    - _ShapeAmount: -0.9
-    - _ShapeEdge: 0.94
-    - _Size: 22.7
+    - _AnimSpin: 1.1
+    - _BurnColorThreshold: 0.619
+    - _CircleMask: 0.948
+    - _Shape: 2.29
+    - _ShapeAmount: -0.15
+    - _ShapeEdge: 0.24
+    - _Size: 17.7
     m_Colors:
-    - _BurnColor: {r: 0.9433962, g: 0.9433962, b: 0.9433962, a: 1}
+    - _BurnColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
