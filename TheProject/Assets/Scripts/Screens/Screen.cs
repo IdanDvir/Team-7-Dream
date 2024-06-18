@@ -5,7 +5,7 @@ using Utils;
 public delegate void OnFinished();
 public abstract class Screen : MonoBehaviour
 {
-    [SerializeField] public float hideDelay = 0;
+    [SerializeField] public float hideDelay = 0.7f;
     public event OnFinished OnFinished;
     public UniTaskCompletionSource OnFinishedTask = new UniTaskCompletionSource();
     

@@ -26,8 +26,11 @@ public abstract class MinigameScreen : Screen
 
     public override void StartScreen(StopwatchView stopWatchView)
     {
-        stopwatch.Start();
-        stopWatchView.Activate(stopwatch);
+        if (stopWatchView)
+        {
+            stopwatch.Start();
+            stopWatchView.Activate(stopwatch);
+        }
     }
 
     public override async UniTask Hide()
