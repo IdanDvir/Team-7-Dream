@@ -11,6 +11,7 @@ namespace MiniGames.TentaclesExplode
         [SerializeField] private Transform target;
         [SerializeField] private float firstLaunchForce;
         [SerializeField] private float gravity = -4.81f;
+        private Vector3 previousGravity;
 
         public override async UniTask Show()
         {
@@ -18,7 +19,14 @@ namespace MiniGames.TentaclesExplode
             firstJuggleBomb.Init(OnDrop);
             secondJuggleBomb.Init(OnDrop);
             thirdJuggleBomb.Init(OnDrop);
+            previousGravity = Physics.gravity;
             Physics.gravity = new Vector3(0.0f, gravity, 0.0f);
+        }
+
+        public override async UniTask Hide()
+        {
+            await base.Hide();
+            Physics.gravity = previousGravity;
         }
 
         private void OnDrop()
