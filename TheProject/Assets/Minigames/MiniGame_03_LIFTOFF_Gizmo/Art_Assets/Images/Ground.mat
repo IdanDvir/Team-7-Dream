@@ -7,11 +7,10 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_BS_Gunner_Character_Body
+  m_Name: Ground
   m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
   m_ValidKeywords: []
   m_InvalidKeywords:
-  - _DEBUGMODE
   - _MAIN_LIGHT_SHADOWS
   - _SHADOWS_SOFT
   m_LightmapFlags: 4
@@ -24,12 +23,12 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _AOMask:
-        m_Texture: {fileID: 2800000, guid: 6264e04f31a9b8d448df2b00dc277022, type: 3}
+        m_Texture: {fileID: 2800000, guid: 65e02e09881f7684bb3a4ee9fcae88b1, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 44d4556c83d164e48b711ec4abda4072, type: 3}
-        m_Scale: {x: 0.98, y: 1.05}
+        m_Texture: {fileID: 2800000, guid: b8323e77d74b842f0a225a21376c47ca, type: 3}
+        m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
         m_Texture: {fileID: 0}
@@ -56,19 +55,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 44d4556c83d164e48b711ec4abda4072, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
+        m_Texture: {fileID: 2800000, guid: 345b053472632dc4aab5a4977eaf7783, type: 3}
+        m_Scale: {x: 0.1, y: 0.1}
+        m_Offset: {x: 0.62, y: 0.19}
     - _MatCap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Matcap:
         m_Texture: {fileID: 2800000, guid: f22d3b0afe54a8e4b8b637038e56d477, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    - _MatcapBlurMask:
-        m_Texture: {fileID: 2800000, guid: 7a1150024c2bb0e4ba8d1f1b74d8aaf0, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -115,7 +110,7 @@ Material:
     - _Color_Multiply_Mode: 1
     - _Cull: 2
     - _Cutoff: 0.5
-    - _DEBUGMODE: 1
+    - _DEBUGMODE: 0
     - _DebugAO: 0
     - _DebugDetailMask: 0
     - _DebugMatcapBlurMask: 0
@@ -125,18 +120,17 @@ Material:
     - _EnvironmentReflections: 1
     - _GlossMapScale: 0
     - _Glossiness: 0
-    - _GlossinessSource: 0
     - _GlossyReflections: 0
     - _LightEnable: 0
     - _LightGradientDistance: 1
     - _LightGradientPower: 1
-    - _LightStyleThickness: 4
-    - _Light_Height_Offset: -1
-    - _Light_Intensity: 2
-    - _Light_Power: 8
+    - _LightStyleThickness: 1
+    - _Light_Height_Offset: 0
+    - _Light_Intensity: 1
+    - _Light_Power: 1
     - _MAIN_LIGHT_SHADOWS: 1
     - _MAIN_LIGHT_SHADOWS_CASCADE: 0
-    - _MatCapRimPower: 0.5
+    - _MatCapRimPower: 1
     - _MatCap_Blur_Amount: 1
     - _MatCap_Mix_Amount: 1
     - _MatCap_Mix_BlurMask_Decay: 0
@@ -149,20 +143,16 @@ Material:
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _RimPower: 0.25
     - _SHADOWS_SCREEN: 0
     - _SHADOWS_SOFT: 1
     - _SampleGI: 0
     - _ShadowMatcapMask: 0
-    - _Shininess: 0
-    - _Smoothness: 0
-    - _SmoothnessSource: 0
+    - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
-    - _SpecSource: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0
-    - _WorkflowMode: 0
+    - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
@@ -170,12 +160,12 @@ Material:
     - _Color_Multiply: {r: 1, g: 1, b: 1, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _LightGradientPosition: {r: 0, g: 0, b: 0, a: 0}
-    - _Light_Color: {r: 0.954822, g: 1, b: 0.5990566, a: 0}
-    - _Light_Direction: {r: 0.5, g: -0.5, b: -0.5, a: 0}
+    - _Light_Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Light_Direction: {r: 0, g: 1, b: 0, a: 0}
     - _ShadowColorMultiply: {r: 1, g: 1, b: 1, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &5818699600300341831
+--- !u!114 &821579115640248211
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
