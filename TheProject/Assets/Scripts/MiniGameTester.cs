@@ -28,6 +28,7 @@ public class MiniGameTester : MonoBehaviour
         minigameScreen.Lose += OnLose;
         minigameScreen.StartScreen();
         await UniTask.WaitUntil(MinigameOver);
+        await UniTask.WaitForSeconds(2);
         await minigameScreen.Hide();
     }
 
