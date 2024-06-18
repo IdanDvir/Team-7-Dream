@@ -19,6 +19,7 @@ namespace MiniGames.Poke
 
         protected override void OnTimerEnd()
         {
+            isActive = false;
             OnLose();
         }
 
@@ -26,6 +27,7 @@ namespace MiniGames.Poke
         {
             if (isActive)
             {
+                isActive = false;
                 THE_EYE.SetActive(false);
                 OWWW.SetActive(true);
                 OnWin();
