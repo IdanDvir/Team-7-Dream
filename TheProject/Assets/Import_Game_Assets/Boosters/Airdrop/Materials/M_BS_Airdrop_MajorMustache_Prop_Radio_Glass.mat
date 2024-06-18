@@ -21,17 +21,18 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: M_BS_Airdrop_MajorMustache_Prop_Radio_Glass
-  m_Shader: {fileID: -6465566751694194690, guid: d6fe0ec327a8cf347a3ff094d74b60e7,
-    type: 3}
+  m_Shader: {fileID: 45, guid: 0000000000000000f000000000000000, type: 0}
   m_ValidKeywords:
+  - _ALPHAPREMULTIPLY_ON
+  m_InvalidKeywords:
   - _MAIN_LIGHT_SHADOWS
   - _SHADOWS_SOFT
-  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
+  m_CustomRenderQueue: 3000
+  stringTagMap:
+    RenderType: Transparent
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
@@ -135,11 +136,11 @@ Material:
     - _DebugMatcapBlurMask: 0
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
-    - _DstBlend: 1
+    - _DstBlend: 10
     - _ENUM: 0
     - _EnvironmentReflections: 1
     - _GlossMapScale: 1
-    - _Glossiness: 0.4472136
+    - _Glossiness: 0.669
     - _GlossyReflections: 1
     - _LightEnable: 0
     - _LightGradientDistance: 1
@@ -179,7 +180,7 @@ Material:
     - _ZWrite: 0
     m_Colors:
     - _BaseColor: {r: 0.5283019, g: 0.46639308, b: 0.07725169, a: 1}
-    - _Color: {r: 1, g: 1, b: 1, a: 0.7077922}
+    - _Color: {r: 0.5235849, g: 0.88372046, b: 1, a: 0.56078434}
     - _Color_Multiply: {r: 1, g: 0.7950491, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GlassColor: {r: 0, g: 1, b: 0.8481808, a: 1}
