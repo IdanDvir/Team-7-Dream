@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -10,6 +11,7 @@ namespace MiniGames.BananaMinigame
     {
         [SerializeField] private Image bananananana;
         [SerializeField] private List<Sprite> banananananaBananananas;
+        [SerializeField] private Sprite thisIsMyFinalForm;
         [SerializeField] private float dragDistance;
 
         private float yDragDiff = 0;
@@ -50,10 +52,17 @@ namespace MiniGames.BananaMinigame
                 bananananana.sprite = banananananaBananananas[currentBanananana];
                 if (currentBanananana == banananananaBananananas.Count - 1)
                 {
+                    finalTransformation().Forget();
                     isActive = false;
                     OnWin();
                 }
             }
+        }
+
+        private async UniTask finalTransformation()
+        {
+            await UniTask.WaitForSeconds(0.5f);
+            bananananana.sprite = thisIsMyFinalForm;
         }
 
         public void OnPointerDown(PointerEventData eventData)
