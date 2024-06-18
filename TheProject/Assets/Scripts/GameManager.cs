@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
     private List<MinigameScreen> playedMinigames = new();
     private Screen currentScreen;
     private int lives;
+    private int wins;
     
     void Start()
     {
@@ -99,14 +100,15 @@ public class GameManager : MonoBehaviour
 
     private void OnMinigameWin()
     {
-        if (playedMinigames.Count >= winsToWin)
+        wins++;
+        if (wins >= winsToWin)
         {
             var nextMinigame = victoryScreen;//PickRandomMinigame(availableMinigames);
             var task = SwitchTo(nextMinigame);
         }
         else
         {
-            var nextMinigame = victoryScreen;//PickRandomMinigame(availableMinigames);
+            var nextMinigame = PickRandomMinigame(availableMinigames);
             var task = SwitchTo(nextMinigame);
         }
     }
