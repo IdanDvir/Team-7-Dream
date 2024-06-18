@@ -4884,15 +4884,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4000c398320c46539939f7b7441e38dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hideDelay: 0
   dont: 0
-  minigameLengthSeconds: 10
+  minigameLengthSeconds: 6
   title: JUGGLE BOMBS!!
   firstJuggleBomb: {fileID: 4157934282933382102}
   secondJuggleBomb: {fileID: 6498217582681862954}
   thirdJuggleBomb: {fileID: 5079917910619097710}
   target: {fileID: 6652236148155416712}
   firstLaunchForce: 1
-  gravity: -4.81
+  gravity: -2.5
 --- !u!1 &974748919828135701
 GameObject:
   m_ObjectHideFlags: 0

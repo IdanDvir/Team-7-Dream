@@ -32,6 +32,9 @@ public class GameManager : MonoBehaviour
     private List<MinigameScreen> minigames;
 
     [SerializeField] 
+    private GameObject uiGradient;
+    
+    [SerializeField] 
     private int maxLives;
     
     [SerializeField] 
@@ -81,6 +84,7 @@ public class GameManager : MonoBehaviour
         stopwatchView.gameObject.SetActive(false);
         transitionInstance = Instantiate(transitionScreen);
         transitionInstance.gameObject.SetActive(false);
+        uiGradient.SetActive(false);
         currentScreen = Instantiate(mainMenu);
         mainTheme.Play();
         currentScreen.OnFinished += OnGameStart;
@@ -133,6 +137,7 @@ public class GameManager : MonoBehaviour
             stopwatchView.Reset();
             stopwatchView.gameObject.SetActive(true);
             lifeView.gameObject.SetActive(true);
+            uiGradient.SetActive(true);
             minigame.Win += OnMinigameWin;
             minigame.Lose += OnMinigameLose;
             playedMinigames.Add(screen as MinigameScreen);
@@ -143,6 +148,7 @@ public class GameManager : MonoBehaviour
             lifeView.gameObject.SetActive(false);
             stopwatchView.gameObject.SetActive(false);
             miniGameTitleView.gameObject.SetActive(false);
+            uiGradient.SetActive(false);
         }
         
         await currentScreen.Show();

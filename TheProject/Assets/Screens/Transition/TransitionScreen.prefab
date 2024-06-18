@@ -358,6 +358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be8bbfc03b324612a13f542dcf34e835, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hideDelay: 0
   transitionAnimator: {fileID: 4869132176338861603}
 --- !u!95 &4869132176338861603
 Animator:
@@ -399,7 +400,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_TargetDisplay: 0
 --- !u!1 &8028346503152530188
 GameObject:

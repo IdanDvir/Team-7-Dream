@@ -150,8 +150,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dee6b98a3be64e32b58cd9963aed92e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hideDelay: 0
   dont: 0
-  minigameLengthSeconds: 5
+  minigameLengthSeconds: 3
   title: FEED SMASH!!
   bananaObject: {fileID: 9011410699428399209}
   targetTransform: {fileID: 1913498999671595527}

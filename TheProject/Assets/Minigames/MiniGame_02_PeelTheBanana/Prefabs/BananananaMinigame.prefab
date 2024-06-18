@@ -114,8 +114,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 269eed071b5e431381dd918f5157dabf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hideDelay: 0
   dont: 0
-  minigameLengthSeconds: 5
+  minigameLengthSeconds: 3
   title: Peel!!!
   bananananana: {fileID: 7772774833145672509}
   banananananaBananananas:

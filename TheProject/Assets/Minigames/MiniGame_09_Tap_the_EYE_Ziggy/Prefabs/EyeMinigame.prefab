@@ -193,8 +193,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hideDelay: 0.7
   dont: 0
-  minigameLengthSeconds: 5
-  title: 
+  minigameLengthSeconds: 3
+  title: Poke!!
   THE_EYE: {fileID: 9033195051373191945}
   OWWW: {fileID: 3093706014873029716}
 --- !u!1 &9033195051373191945
