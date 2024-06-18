@@ -335,6 +335,7 @@ MonoBehaviour:
   - {fileID: 7924852117093075798, guid: 50d93b4505c7a40e9b0aa51aecf583ba, type: 3}
   - {fileID: 7616447277708089114, guid: d38dc26d2cae845aca585d2a06f1e83a, type: 3}
   - {fileID: 1039060501904179696, guid: cc49f91aa7e4d4ff48028db3710f571c, type: 3}
+  - {fileID: 6214703028144302674, guid: c140f0036b71f40fb9d82875f6c999b6, type: 3}
   maxLives: 3
   winsToWin: 5
 --- !u!4 &2126950435
