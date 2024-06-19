@@ -60,6 +60,10 @@ namespace MiniGames.LIFTOFF
 
         public override async UniTask DoExtraEnd()
         {
+            if (!didWin)
+            {
+                return;
+            }
             await base.DoExtraEnd();
             EXPLOSIOOOONNNN.GameObject().SetActive(true);
             EXPLOSIOOOONNNN.transform.position = gizmo.transform.position;
