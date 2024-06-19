@@ -392,6 +392,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5082277457097589479}
   - component: {fileID: 8330929792207200904}
+  - component: {fileID: 8705061849533837749}
   m_Layer: 0
   m_Name: VictoryScreen
   m_TagString: Untagged
@@ -430,3 +431,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hideDelay: 0
   pirate: {fileID: 2597257536567456981}
+--- !u!111 &8705061849533837749
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7129261086139255211}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 7bf2759a94645b74f9caf86bfc40aff6, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 7bf2759a94645b74f9caf86bfc40aff6, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
