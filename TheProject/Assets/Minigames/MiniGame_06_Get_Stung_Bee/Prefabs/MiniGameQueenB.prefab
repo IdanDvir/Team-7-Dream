@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 432373301528146395}
   - component: {fileID: 432373301528146394}
   - component: {fileID: 432373301528146393}
+  - component: {fileID: 3684921128321514632}
   m_Layer: 5
   m_Name: Bee (2)
   m_TagString: Untagged
@@ -29,7 +30,7 @@ RectTransform:
   m_GameObject: {fileID: 432373301528146375}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.69955, y: 0.69955, z: 0.69955}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4137733631601634784}
@@ -120,6 +121,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 100, y: 100}
   m_EdgeRadius: 0
+--- !u!95 &3684921128321514632
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432373301528146375}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0535698b108d22a42b3ee3ec44b1bbc9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &432373301713892274
 GameObject:
   m_ObjectHideFlags: 0
@@ -133,6 +155,7 @@ GameObject:
   - component: {fileID: 432373301713892278}
   - component: {fileID: 432373301713892277}
   - component: {fileID: 432373301713892276}
+  - component: {fileID: 2856645650917350773}
   m_Layer: 5
   m_Name: Bee (3)
   m_TagString: Untagged
@@ -149,7 +172,7 @@ RectTransform:
   m_GameObject: {fileID: 432373301713892274}
   m_LocalRotation: {x: -0, y: -0, z: -0.461986, w: 0.88688725}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_LocalScale: {x: -0.6907, y: 0.6907, z: 0.6907}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4137733631601634784}
@@ -240,6 +263,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 100, y: 100}
   m_EdgeRadius: 0
+--- !u!95 &2856645650917350773
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432373301713892274}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0535698b108d22a42b3ee3ec44b1bbc9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &432373301756396891
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,6 +297,7 @@ GameObject:
   - component: {fileID: 432373301756396895}
   - component: {fileID: 432373301756396894}
   - component: {fileID: 432373301756396893}
+  - component: {fileID: 3485122836919719294}
   m_Layer: 5
   m_Name: Bee (5)
   m_TagString: Untagged
@@ -269,7 +314,7 @@ RectTransform:
   m_GameObject: {fileID: 432373301756396891}
   m_LocalRotation: {x: -0, y: -0, z: 0.09695405, w: 0.9952889}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_LocalScale: {x: -0.65526, y: 0.65526, z: 0.65526}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4137733631601634784}
@@ -360,6 +405,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 100, y: 100}
   m_EdgeRadius: 0
+--- !u!95 &3485122836919719294
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432373301756396891}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0535698b108d22a42b3ee3ec44b1bbc9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &432373301912606816
 GameObject:
   m_ObjectHideFlags: 0
@@ -486,6 +552,7 @@ GameObject:
   - component: {fileID: 432373302669431045}
   - component: {fileID: 432373302669431044}
   - component: {fileID: 432373302669431047}
+  - component: {fileID: 5010659740011712858}
   m_Layer: 5
   m_Name: Bee
   m_TagString: Untagged
@@ -502,7 +569,7 @@ RectTransform:
   m_GameObject: {fileID: 432373302669431042}
   m_LocalRotation: {x: -0, y: -0, z: -0.21842782, w: 0.97585315}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.65527, y: 0.65527, z: 0.65527}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4137733631601634784}
@@ -593,6 +660,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 100, y: 100}
   m_EdgeRadius: 0
+--- !u!95 &5010659740011712858
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432373302669431042}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0535698b108d22a42b3ee3ec44b1bbc9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &432373302933112564
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,6 +694,7 @@ GameObject:
   - component: {fileID: 432373302933112520}
   - component: {fileID: 432373302933112567}
   - component: {fileID: 432373302933112566}
+  - component: {fileID: 5376873087136482713}
   m_Layer: 5
   m_Name: Bee (1)
   m_TagString: Untagged
@@ -622,7 +711,7 @@ RectTransform:
   m_GameObject: {fileID: 432373302933112564}
   m_LocalRotation: {x: -0, y: -0, z: 0.28985915, w: 0.95706934}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6642, y: 0.6642, z: 0.6642}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4137733631601634784}
@@ -713,6 +802,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 100, y: 100}
   m_EdgeRadius: 0
+--- !u!95 &5376873087136482713
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 432373302933112564}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0535698b108d22a42b3ee3ec44b1bbc9, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &608201835418107216
 GameObject:
   m_ObjectHideFlags: 0
@@ -738,14 +848,14 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 608201835418107216}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0.30078897, w: 0.9536907}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 432373301912606817}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 35.01}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -6.8, y: -137.2}
