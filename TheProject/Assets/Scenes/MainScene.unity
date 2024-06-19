@@ -882,7 +882,6 @@ MonoBehaviour:
   - {fileID: 6214703028144302674, guid: c140f0036b71f40fb9d82875f6c999b6, type: 3}
   - {fileID: 432373303161104086, guid: 4b90cfd4d4c5f4c6ca4238a790f859b4, type: 3}
   - {fileID: 6870264600396003957, guid: 13b25c12876d2497892c18bc9f4f9c01, type: 3}
-  - {fileID: 6214703028144302674, guid: c140f0036b71f40fb9d82875f6c999b6, type: 3}
   - {fileID: 6972144517621745772, guid: a97528d70576e4dc5b9e7112d5d111d6, type: 3}
   uiGradient: {fileID: 1839046060}
   maxLives: 3
