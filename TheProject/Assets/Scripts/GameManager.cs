@@ -122,12 +122,13 @@ public class GameManager : MonoBehaviour
         var prevScreen = currentScreen;
         
         stopwatchView.Pause();
+        gameTheme.DOFade(gameThemeVolume/2.0F, 0.5f);
         await currentScreen.DoExtraEnd();
         await UniTask.WaitForSeconds(currentScreen.hideDelay);
         transitionInstance.gameObject.SetActive(true);
         sfxSource.PlayOneShot(doorsOpen);
-        gameTheme.DOFade(gameThemeVolume/2.0F, 0.5f);
         await transitionInstance.Show();
+        await currentScreen.Hide();
         lifeView.Set(lives);
         Destroy(prevScreen.gameObject);
         currentScreen = Instantiate(screen);

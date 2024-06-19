@@ -12,7 +12,11 @@ namespace MiniGames.TentaclesExplode
         [SerializeField] private Transform target;
         [SerializeField] private float firstLaunchForce;
         [SerializeField] private float gravity = -4.81f;
+        [SerializeField] private AudioSource clinicalDeath;
+        [SerializeField] private GameObject explosionEffect;
+        
         private Vector3 previousGravity;
+        private GameObject[] bombEffects;
 
         public override async UniTask Show()
         {
@@ -28,6 +32,10 @@ namespace MiniGames.TentaclesExplode
         {
             await base.Hide();
             Physics.gravity = previousGravity;
+            foreach (var bomb in bombEffects)
+            {
+                Destroy(bomb);
+            }
         }
 
         private void OnDrop()
@@ -67,6 +75,29 @@ namespace MiniGames.TentaclesExplode
             thirdJuggleBomb.Stop();
             stopwatch.Stop();
             OnWin();
+        }
+
+        public override async UniTask DoExtraEnd()
+        {
+            await base.DoExtraEnd();
+            var locations = new[]
+            {
+                firstJuggleBomb.transform.position,
+                secondJuggleBomb.transform.position,
+                thirdJuggleBomb.transform.position
+            };
+            Destroy(firstJuggleBomb.gameObject);
+            Destroy(secondJuggleBomb.gameObject);
+            Destroy(thirdJuggleBomb.gameObject);
+            bombEffects = new[]
+            {
+                Instantiate(explosionEffect, locations[0], Quaternion.identity),
+                Instantiate(explosionEffect, locations[1], Quaternion.identity),
+                Instantiate(explosionEffect, locations[2], Quaternion.identity),
+            };
+            await UniTask.WaitForSeconds(0.2f);
+            clinicalDeath.Play();
+            await UniTask.WaitForSeconds(1f);
         }
     }
 }
