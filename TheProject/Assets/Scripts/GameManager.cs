@@ -112,7 +112,6 @@ public class GameManager : MonoBehaviour
         lives = maxLives;
         availableMinigames.Clear();
         availableMinigames.AddRange(minigames);
-        playedMinigames.Clear();
         var nextMinigame = PickRandomMinigame(availableMinigames);
         await SwitchTo(nextMinigame);
     }
@@ -136,6 +135,10 @@ public class GameManager : MonoBehaviour
         var minigame = currentScreen.GetComponent<MinigameScreen>();
         if (minigame)
         {
+            availableMinigames.Remove(screen as MinigameScreen);
+            if (availableMinigames.Count <= 0)
+                availableMinigames.AddRange(minigames);
+            
             Time.timeScale += timeScaleDamp;
             stopwatchView.Reset();
             stopwatchView.gameObject.SetActive(true);
