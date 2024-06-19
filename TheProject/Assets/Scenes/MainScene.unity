@@ -903,7 +903,7 @@ MonoBehaviour:
   - {fileID: 6972144517621745772, guid: a97528d70576e4dc5b9e7112d5d111d6, type: 3}
   uiGradient: {fileID: 1839046060}
   maxLives: 3
-  winsToWin: 5
+  winsToWin: 10
   sfxSource: {fileID: 1749492536}
   mainTheme: {fileID: 826804358}
   gameTheme: {fileID: 1164726088}

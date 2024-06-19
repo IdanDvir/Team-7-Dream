@@ -987,7 +987,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hideDelay: 0
   dont: 0
-  minigameLengthSeconds: 5
+  minigameLengthSeconds: 8
   title: Get Stung!!
   bees:
   - {fileID: 432373302669431044}
