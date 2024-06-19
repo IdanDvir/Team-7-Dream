@@ -763,7 +763,6 @@ GameObject:
   - component: {fileID: 1839046061}
   - component: {fileID: 1839046064}
   - component: {fileID: 1839046063}
-  - component: {fileID: 1839046062}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -792,23 +791,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1839046062
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1839046060}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!114 &1839046063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -891,16 +873,6 @@ MonoBehaviour:
   miniGameTitleViewPrefab: {fileID: 8682182276669858600, guid: c543dfba6c771466895ec251d30cc9d2, type: 3}
   minigames:
   - {fileID: 1913499000722318350, guid: affd63401956f4b3db9eda0f57c7b56a, type: 3}
-  - {fileID: 2581824959474838205, guid: 1b6c62f42a7cb4895b7b8b0da356458e, type: 3}
-  - {fileID: 2132286706201566141, guid: 3fd375c78cc17491dba015e81c8c5eb4, type: 3}
-  - {fileID: 7924852117093075798, guid: 50d93b4505c7a40e9b0aa51aecf583ba, type: 3}
-  - {fileID: 7616447277708089114, guid: d38dc26d2cae845aca585d2a06f1e83a, type: 3}
-  - {fileID: 1039060501904179696, guid: cc49f91aa7e4d4ff48028db3710f571c, type: 3}
-  - {fileID: 6214703028144302674, guid: c140f0036b71f40fb9d82875f6c999b6, type: 3}
-  - {fileID: 432373303161104086, guid: 4b90cfd4d4c5f4c6ca4238a790f859b4, type: 3}
-  - {fileID: 6870264600396003957, guid: 13b25c12876d2497892c18bc9f4f9c01, type: 3}
-  - {fileID: 6214703028144302674, guid: c140f0036b71f40fb9d82875f6c999b6, type: 3}
-  - {fileID: 6972144517621745772, guid: a97528d70576e4dc5b9e7112d5d111d6, type: 3}
   uiGradient: {fileID: 1839046060}
   maxLives: 3
   winsToWin: 10
