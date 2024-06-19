@@ -122,6 +122,7 @@ public class GameManager : MonoBehaviour
         var prevScreen = currentScreen;
         
         stopwatchView.Pause();
+        await currentScreen.DoExtraEnd();
         await UniTask.WaitForSeconds(currentScreen.hideDelay);
         transitionInstance.gameObject.SetActive(true);
         sfxSource.PlayOneShot(doorsOpen);

@@ -8,6 +8,10 @@ namespace Utils
         [SerializeField] private float speed;
         [SerializeField] private float step;
         [SerializeField] private float boundsDistance;
+        [SerializeField] private bool flipDirection;
+        [SerializeField] private Vector3 leftRotation;
+        [SerializeField] private Vector3 rightRotation;
+        
         private Vector2 relativeBounds;
         private bool isActive;
         private bool movingLeft;
@@ -38,11 +42,19 @@ namespace Utils
             if (cacheTransform.position.x < relativeBounds.x)
             {
                 movingLeft = false;
+                if (flipDirection)
+                {
+                    cacheTransform.localEulerAngles = rightRotation;
+                }
                 newPosition.x = relativeBounds.x;
                 cacheTransform.position = newPosition;
             } else if(cacheTransform.position.x > relativeBounds.y)
             {
                 movingLeft = true;
+                if (flipDirection)
+                {
+                    cacheTransform.localEulerAngles = leftRotation;
+                }
                 newPosition.x = relativeBounds.y;
                 cacheTransform.position = newPosition;
             }
