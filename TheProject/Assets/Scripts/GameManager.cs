@@ -185,6 +185,7 @@ public class GameManager : MonoBehaviour
             var nextMinigame = lossScreen;
             var task = SwitchTo(nextMinigame);
             gameTheme.Stop();
+            Time.timeScale = 1.0f;
         }
         else
         {
@@ -208,6 +209,7 @@ public class GameManager : MonoBehaviour
             var nextMinigame = victoryScreen;
             var task = SwitchTo(nextMinigame);
             gameTheme.Stop();
+            Time.timeScale = 1.0f;
         }
         else
         {

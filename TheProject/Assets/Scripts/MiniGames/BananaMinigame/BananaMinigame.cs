@@ -63,8 +63,9 @@ namespace MiniGames.BananaMinigame
 
         private async UniTask finalTransformation()
         {
-            await UniTask.WaitForSeconds(1.0f);
+            await UniTask.WaitForSeconds(0.5f);
             bananananana.sprite = thisIsMyFinalForm;
+            await UniTask.WaitForSeconds(1.0f);
         }
 
         public void OnPointerDown(PointerEventData eventData)
