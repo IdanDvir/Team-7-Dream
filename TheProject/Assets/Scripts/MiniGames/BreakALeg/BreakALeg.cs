@@ -58,7 +58,7 @@ namespace MiniGames.BreakALeg
             if (other.gameObject == death)
             {
                 Physics.gravity = oldGravity;
-                Time.timeScale = Time.timeScale;
+                Time.timeScale = previousTimescape;
                 bellaRina.useGravity = false;
                 bellaRina.velocity = Vector3.zero;
                 OnLose();
@@ -67,7 +67,7 @@ namespace MiniGames.BreakALeg
             if (other.gameObject == win)
             {
                 Physics.gravity = oldGravity;
-                Time.timeScale = Time.timeScale;
+                Time.timeScale = previousTimescape;
                 bellaRina.useGravity = false;
                 bellaRina.velocity = Vector3.zero;
                 OnWin();
