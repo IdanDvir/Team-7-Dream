@@ -364,7 +364,7 @@ MonoBehaviour:
   hideDelay: 0
   dont: 0
   minigameLengthSeconds: 5
-  title: SWIM!!
+  title: Evade!!
   tentaclesObject: {fileID: 511574471623997961}
   cloudiaTransform: {fileID: 8962191910891893515}
   cloudiaImage: {fileID: 2132286706173284332}
