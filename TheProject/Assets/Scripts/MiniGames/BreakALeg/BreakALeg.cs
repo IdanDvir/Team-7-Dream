@@ -44,7 +44,7 @@ namespace MiniGames.BreakALeg
             bouncyBounce.Activate();
             bellaRina.useGravity = true;
             previousTimescape = Time.timeScale;
-            Time.timeScale += 2;
+            Time.timeScale += 1;
             oldGravity = Physics.gravity;
             Physics.gravity = Vector3.down * gravityForce;
             var startingXForce = Random.Range(startXForceMin, startXForceMax) * bellaRina.mass;
