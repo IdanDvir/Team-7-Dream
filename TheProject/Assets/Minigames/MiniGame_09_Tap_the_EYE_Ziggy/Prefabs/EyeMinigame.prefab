@@ -191,7 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dec337f6eacf4c4cb6fc709b7ab7fe4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hideDelay: 0.7
+  hideDelay: 0
   dont: 0
   minigameLengthSeconds: 3
   title: Poke!!

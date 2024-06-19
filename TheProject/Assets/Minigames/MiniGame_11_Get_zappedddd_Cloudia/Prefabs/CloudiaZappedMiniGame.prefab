@@ -91,6 +91,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSpeed: 50
   axis: {x: 1, y: 0, z: 0}
+  is3D: 0
 --- !u!1 &1602464175385888194
 GameObject:
   m_ObjectHideFlags: 0
@@ -360,7 +361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17c0b6a979dd45b48713f97987fdd396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hideDelay: 0.7
+  hideDelay: 0
   dont: 0
   minigameLengthSeconds: 5
   title: SWIM!!
@@ -430,6 +431,9 @@ MonoBehaviour:
   speed: 50
   step: 5
   boundsDistance: 300
+  flipDirection: 0
+  leftRotation: {x: 0, y: 0, z: 0}
+  rightRotation: {x: 0, y: 0, z: 0}
 --- !u!1 &5077911200153207995
 GameObject:
   m_ObjectHideFlags: 0

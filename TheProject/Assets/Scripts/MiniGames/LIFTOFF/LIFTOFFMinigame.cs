@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -15,6 +16,7 @@ namespace MiniGames.LIFTOFF
 
         private bool isLaunching = false;
         private bool isActive = false;
+        private bool didWin;
 
         public override void StartScreen(StopwatchView stopWatchView)
         {
@@ -49,14 +51,21 @@ namespace MiniGames.LIFTOFF
 
             if (gizmo.transform.position.y >= ziggy.transform.position.y)
             {
-                EXPLOSIOOOONNNN.GameObject().SetActive(true);
-                EXPLOSIOOOONNNN.transform.position = gizmo.transform.position;
-                EXPLOSIOOOONNNN.Play(true);
+                didWin = true;
                 OnWin();
                 isActive = false;
-                var direction = Random.Range(0, 1) == 1 ? Vector3.left : Vector3.right;
-                gizmo.AddForce((Vector3.up + direction) * 100000 * Time.deltaTime);
             }
+        }
+
+        public override async UniTask DoExtraEnd()
+        {
+            await base.DoExtraEnd();
+            EXPLOSIOOOONNNN.GameObject().SetActive(true);
+            EXPLOSIOOOONNNN.transform.position = gizmo.transform.position;
+            EXPLOSIOOOONNNN.Play(true);
+            var direction = Random.Range(0, 1) == 1 ? Vector3.left : Vector3.right;
+            gizmo.AddForce((Vector3.up + direction) * 100000 * Time.deltaTime);
+            await UniTask.WaitForSeconds(0.7f);
         }
     }
 }

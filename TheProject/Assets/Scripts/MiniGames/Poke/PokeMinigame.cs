@@ -1,3 +1,4 @@
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using Utils;
@@ -10,6 +11,7 @@ namespace MiniGames.Poke
         [SerializeField] private GameObject OWWW;
 
         private bool isActive = false;
+        private bool didWin;
 
         public override void StartScreen(StopwatchView stopWatchView)
         {
@@ -27,10 +29,20 @@ namespace MiniGames.Poke
         {
             if (isActive)
             {
+                didWin = true;
                 isActive = false;
+                OnWin();
+            }
+        }
+
+        public override async UniTask DoExtraEnd()
+        {
+            await base.DoExtraEnd();
+            if (didWin)
+            {
                 THE_EYE.SetActive(false);
                 OWWW.SetActive(true);
-                OnWin();
+                await UniTask.WaitForSeconds(0.7f);
             }
         }
     }

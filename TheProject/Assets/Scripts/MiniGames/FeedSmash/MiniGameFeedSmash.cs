@@ -42,11 +42,16 @@ namespace MiniGames.FeedSmash
         private void OnReachedTarget()
         {
             bananaObject.Deactivate();
-            AnimateSmash().Forget();
             stopwatch.Stop();
             
             OnWin();
             Debug.Log("Won smash mini game");
+        }
+
+        public override async UniTask DoExtraEnd()
+        {
+            await base.DoExtraEnd();
+            await AnimateSmash();
         }
 
         protected override void OnTimerEnd()

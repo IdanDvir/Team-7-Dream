@@ -89,7 +89,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &6009758996352835049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7c8af2ac99b49d6a5ddc6c8d468f0ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hideDelay: 0.7
+  hideDelay: 0
   dont: 0
   minigameLengthSeconds: 5
   title: LIFTOFF!!

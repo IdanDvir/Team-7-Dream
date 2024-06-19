@@ -19,6 +19,7 @@ namespace MiniGames.BananaMinigame
         private bool isActive;
         private int currentBanananana = 0;
         private Vector3 lastPosition;
+        private bool peeledBanana;
 
         public override void StartScreen(StopwatchView stopWatchView)
         {
@@ -52,7 +53,7 @@ namespace MiniGames.BananaMinigame
                 bananananana.sprite = banananananaBananananas[currentBanananana];
                 if (currentBanananana == banananananaBananananas.Count - 1)
                 {
-                    finalTransformation().Forget();
+                    peeledBanana = true;
                     isActive = false;
                     OnWin();
                 }
@@ -85,6 +86,15 @@ namespace MiniGames.BananaMinigame
             lastPosition = Vector3.zero;
             yDragDiff = 0;
             isDragging = false;
+        }
+
+        public override async UniTask DoExtraEnd()
+        {
+            await base.DoExtraEnd();
+            if (peeledBanana)
+            {
+                await finalTransformation();
+            }
         }
     }
 }

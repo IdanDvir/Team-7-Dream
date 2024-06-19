@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dee6b98a3be64e32b58cd9963aed92e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hideDelay: 1.2
+  hideDelay: 0
   dont: 0
   minigameLengthSeconds: 3
   title: FEED SMASH!!
@@ -249,6 +249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSpeed: 50
   axis: {x: 1, y: 1, z: 1}
+  is3D: 0
 --- !u!1 &2198135118397811172
 GameObject:
   m_ObjectHideFlags: 0
