@@ -212,6 +212,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dragSpeed: 1000
   axis: {x: 1, y: 0, z: 0}
+  is3D: 0
 --- !u!65 &470538582585530463
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -522,7 +523,7 @@ MonoBehaviour:
   hideDelay: 0
   dont: 0
   minigameLengthSeconds: 20
-  title: BREAK A LEG!!
+  title: SAVE!!
   death: {fileID: 470538584050504188}
   win: {fileID: 470538584480063258}
   bouncyBounce: {fileID: 470538582585530450}

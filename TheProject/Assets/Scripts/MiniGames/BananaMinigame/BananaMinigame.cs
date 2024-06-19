@@ -63,7 +63,7 @@ namespace MiniGames.BananaMinigame
 
         private async UniTask finalTransformation()
         {
-            await UniTask.WaitForSeconds(0.5f);
+            await UniTask.WaitForSeconds(1.0f);
             bananananana.sprite = thisIsMyFinalForm;
         }
 

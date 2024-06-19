@@ -1098,7 +1098,7 @@ MonoBehaviour:
   hideDelay: 0
   dont: 0
   minigameLengthSeconds: 8
-  title: Get Stung!!
+  title: BLoW Bees!!
   bees:
   - {fileID: 432373302669431044}
   - {fileID: 432373302933112567}
