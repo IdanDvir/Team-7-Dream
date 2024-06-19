@@ -14,7 +14,6 @@ namespace MiniGames.LIFTOFF
         [SerializeField] private ParticleSystem EXPLOSIOOOONNNN;
 
         private bool isLaunching = false;
-        private float velocity = 0;
         private bool isActive = false;
 
         public override void StartScreen(StopwatchView stopWatchView)

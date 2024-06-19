@@ -6,6 +6,7 @@ namespace MiniGames.FeedSmash
 {
     public class MiniGameFeedSmash : MinigameScreen
     {
+        [SerializeField] private Animation smashAnimations;
         [SerializeField] private OnTargetReachedDraggable bananaObject;
         [SerializeField] private Transform targetTransform;
         [SerializeField] private float minDistanceToWin;
@@ -29,10 +30,21 @@ namespace MiniGames.FeedSmash
             Debug.Log("Started smash mini game");
         }
 
+        private async UniTask AnimateSmash()
+        {
+            smashAnimations.Play("Smash_Mouth_Close");
+            await UniTask.WaitForSeconds(0.4f);
+            smashAnimations.Play("Smash_Mouth_Open");
+            await UniTask.WaitForSeconds(0.3f);
+            smashAnimations.Play("Smash_Mouth_Close");
+        }
+
         private void OnReachedTarget()
         {
             bananaObject.Deactivate();
+            AnimateSmash().Forget();
             stopwatch.Stop();
+            
             OnWin();
             Debug.Log("Won smash mini game");
         }
