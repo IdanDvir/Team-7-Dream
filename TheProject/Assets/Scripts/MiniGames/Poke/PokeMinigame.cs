@@ -31,6 +31,7 @@ namespace MiniGames.Poke
             {
                 didWin = true;
                 isActive = false;
+                stopwatch.Stop();
                 OnWin();
             }
         }

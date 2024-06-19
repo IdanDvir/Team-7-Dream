@@ -55,6 +55,7 @@ namespace MiniGames.BananaMinigame
                 {
                     peeledBanana = true;
                     isActive = false;
+                    stopwatch.Stop();
                     OnWin();
                 }
             }

@@ -61,6 +61,7 @@ namespace MiniGames.BreakALeg
                 Time.timeScale = previousTimescape;
                 bellaRina.useGravity = false;
                 bellaRina.velocity = Vector3.zero;
+                stopwatch.Stop();
                 OnLose();
             }
 
@@ -70,6 +71,7 @@ namespace MiniGames.BreakALeg
                 Time.timeScale = previousTimescape;
                 bellaRina.useGravity = false;
                 bellaRina.velocity = Vector3.zero;
+                stopwatch.Stop();
                 OnWin();
             }
 

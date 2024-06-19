@@ -47,6 +47,7 @@ namespace MiniGames.SumoWrestling
         {
             var win = other.gameObject == deathRight;
             wrestlers.Stop();
+            stopwatch.Stop();
 
             if (win) 
                 OnWin();

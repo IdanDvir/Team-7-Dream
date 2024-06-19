@@ -60,6 +60,7 @@ namespace MiniGames.CloudiaZapped
             {
                 lightningStopwatch.Stop();
             }
+            stopwatch.Stop();
             OnLose();
             Debug.Log("Lost Cloudia mini game");
         }

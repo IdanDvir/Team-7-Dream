@@ -52,6 +52,7 @@ namespace MiniGames.LIFTOFF
             if (gizmo.transform.position.y >= ziggy.transform.position.y)
             {
                 didWin = true;
+                stopwatch.Stop();
                 OnWin();
                 isActive = false;
             }
