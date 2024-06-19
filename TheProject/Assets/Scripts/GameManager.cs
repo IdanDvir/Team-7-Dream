@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Screen transitionScreen;
 
+    [SerializeField]
+    private Screen creditsScreen;
+    
     [SerializeField] 
     private StopwatchView stopwatchViewPrefab;
 
@@ -155,6 +158,7 @@ public class GameManager : MonoBehaviour
             stopwatchView.gameObject.SetActive(false);
             miniGameTitleView.gameObject.SetActive(false);
             uiGradient.SetActive(false);
+            currentScreen.ShowCredits += ShowCredits;
         }
         
         await currentScreen.Show();
@@ -178,7 +182,7 @@ public class GameManager : MonoBehaviour
         sfxSource.PlayOneShot(gameLost);
         if (lives <= 0)
         {
-            var nextMinigame = lossScreen;//;
+            var nextMinigame = lossScreen;
             var task = SwitchTo(nextMinigame);
             gameTheme.Stop();
         }
@@ -187,6 +191,12 @@ public class GameManager : MonoBehaviour
             var nextMinigame = PickRandomMinigame(availableMinigames);
             var task = SwitchTo(nextMinigame);
         }
+    }
+
+    private void ShowCredits()
+    {
+        var nextMinigame = creditsScreen;
+        var task = SwitchTo(nextMinigame);
     }
 
     private void OnMinigameWin()

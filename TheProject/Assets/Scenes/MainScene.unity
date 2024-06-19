@@ -868,6 +868,7 @@ MonoBehaviour:
   victoryScreen: {fileID: 8330929792207200904, guid: 6e5fd305b56274da1bf40bc85cbf8f9a, type: 3}
   lossScreen: {fileID: 6670266860473937174, guid: 2fb1e693b66904e10b80bfc024a01370, type: 3}
   transitionScreen: {fileID: -1036256837583290111, guid: 4efec2a4797ee41d387ec2302f695563, type: 3}
+  creditsScreen: {fileID: 393254588765755572, guid: c670e428d19754591ba94a4d020db7ba, type: 3}
   stopwatchViewPrefab: {fileID: 6912109312502459031, guid: 907a07cf25c68481c8b79e6adbf0c553, type: 3}
   lifeViewPrefab: {fileID: 7429380709984862411, guid: add440f67210240e89290a4df3d545bb, type: 3}
   miniGameTitleViewPrefab: {fileID: 8682182276669858600, guid: c543dfba6c771466895ec251d30cc9d2, type: 3}

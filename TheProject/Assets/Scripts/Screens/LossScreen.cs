@@ -24,6 +24,6 @@ public class LossScreen : Screen
         darkSouls.Play();
         group.DOFade(1.0f, 3.0f);
         await UniTask.WaitForSeconds(5.0f);
-        SceneManager.LoadScene(0);
+        DisplayCredits();
     }
 }

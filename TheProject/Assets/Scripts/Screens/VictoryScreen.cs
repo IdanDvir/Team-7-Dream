@@ -23,6 +23,6 @@ public class VictoryScreen : Screen
         pirate.Play();
         var length = pirate.clip.length;
         await UniTask.WaitForSeconds(length + 1.0f);
-        SceneManager.LoadScene(0);
+        DisplayCredits();
     }
 }
