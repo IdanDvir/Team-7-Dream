@@ -10055,7 +10055,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 0
+  m_PresetInfoIsWorld: 1
 --- !u!114 &2581824959474838207
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10094,7 +10094,7 @@ MonoBehaviour:
   thirdJuggleBomb: {fileID: 8011076447838349456}
   target: {fileID: 8431596608980689526}
   firstLaunchForce: 1
-  gravity: 3
+  gravity: -3
 --- !u!1 &2654151813186625003
 GameObject:
   m_ObjectHideFlags: 0
